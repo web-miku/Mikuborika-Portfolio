@@ -1,0 +1,667 @@
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+	letter-spacing: 0.15rem;
+	line-height: 25px;
+
+}
+
+li {
+  list-style: none;
+	
+}
+
+/* -----------------ここからCSS記述 ヘッダーなど共通-----------------*/
+
+.header {
+	background-color:rgba(241,142,71,0.1);	
+	display: flex;
+	justify-content:space-between;
+	padding: 0 10px;
+	position: sticky;
+	top: 0;
+}
+
+.header-rogo{
+	padding: 2px 0 0 20px;
+}
+
+.header.row{
+	display: flex;
+		justify-content: flex-end;
+}
+
+.row ul {
+	display: flex;
+	padding: 20px 0 3px 0;
+	margin-right: auto;
+	
+}
+
+.row li a {
+	padding: 20px ;
+	color:  #F18E47;
+   text-decoration: none;
+	font-weight: bold;
+	margin-left: auto;
+}
+
+
+.top-img {
+	width: 100%;
+}
+
+
+.main{
+	padding: 0 250px;
+}
+
+
+.text-rubi {
+	font-size: 13px;
+	letter-spacing: 0.2rem;
+}
+
+.text-line span{
+	background:linear-gradient(transparent 60%,  #ffe0c1 20%); 
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+/* -----------------区切りの文字--------------- */
+
+.section-text{
+	margin: 200px 0 20px 0;
+	text-align: center;
+	font-weight: bold;
+		color: #F18E47;
+}
+
+
+
+
+/* -----------------ここからWORKS -----------------*/
+.work-icon img {
+	width: 100px;
+	margin: 20px;
+		
+}
+.work-icon ul{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 20px;
+		color: #F18E47;
+}
+
+
+.driver {
+	 width: 2px;
+    height: 50px;
+    border-right: 1px solid  #F18E47;;
+	margin: auto;
+	
+}
+
+/*----------------- WORKのマウスオーバー（hover)----------------- */
+
+.mouse{
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.mouse img{
+  transition-duration: 0.5s;
+}
+.mouse:hover img{
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+	opacity: 0.5;
+}
+
+
+
+.index-work-img img{
+	text-align: center;
+	width: 100%;
+	padding: 30px 0 0 0;
+}
+
+/* -----------------ここからPLOFILE----------------- */
+
+#PROFILE {
+	text-align: center;
+	padding: 0 0 40px 0;
+}
+#PROFILE img {
+	width: 20%;
+	padding: 20px 0;
+}
+#PROFILE .text-detail{
+	text-align: left;
+	padding: 0 200px;
+}
+
+/*-----------------ここからVIEW MOREのマウスオーバー-----------------*/
+
+/*矢印が右に移動する*/
+.btn.btn6{
+    /*矢印と下線の基点とするためrelativeを指定*/
+	position: relative;
+    /*形状*/
+    display: inline-block;
+	padding: 0 40px;
+    outline: none;
+ position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+	
+	
+}
+
+.btn.btn6 a {
+	text-decoration: none;
+	 color:#F18E47;
+	margin: auto;
+	
+}
+
+/*矢印と下線の形状*/
+.btn.btn6::before{
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+	position: absolute;
+    bottom:-8px;
+    left:15%;
+    /*下線の形状*/    
+    width: 85%;
+    height: 1px;
+	background:#F18E47;
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+.btn.btn6::after{
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+	position: absolute;
+    bottom:-3px;
+    right:0;
+    /*矢印の形状*/    
+    width: 15px;
+    height:1px;
+	background:#F18E47;
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+
+/*hoverした際の移動*/
+.btn.btn6:hover::before{
+    left:30%;
+}
+
+.btn.btn6:hover::after{
+    right:-15%;
+}
+
+
+
+
+/* -----------------ここからPLOFILEのスキル----------------- */
+
+.skill-icon img {
+	width: 65px;
+	margin: 0 20px;
+}
+.skill-icon ul{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 20px ;
+		color: #F18E47;
+		letter-spacing: 0;
+}
+
+
+
+
+
+.License-award {
+	text-align: center;
+	margin-top: 50px;
+	padding:50px 0px;
+}
+
+
+.License-award {
+position:relative;
+}
+
+.License-award:before {
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:300px; /*左上カギカッコの横の長さ*/
+height:200px; /*左上カギカッコの縦の長さ*/
+border-left: #F18E47 1px solid; /*左上カギカッコの縦の色、太さ、線の種類*/
+border-top: #F18E47 1px solid; /*左上カギカッコの横の色、太さ、線の種類*/
+}
+.License-award:after {
+content:"";
+position:absolute;
+bottom:0;
+right:0;
+width:300px; /*右下カギカッコの横の長さ*/
+height:200px; /*右下カギカッコの縦の長さ*/
+border-right: #F18E47 1px solid; /*右下カギカッコの指定*/
+border-bottom: #F18E47 1px solid; /*左上カギカッコの指定*/
+}
+
+
+
+
+/*----------------- トップの-コンタクトページ-----------------*/
+
+
+#contact{
+	text-align: center;
+}
+
+
+.contact-text{
+	padding: 60px 0 0 0;
+}
+
+.contact-textmail{
+	padding: 30px 0 80px 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #F18E47;
+	
+}
+
+.contact-hana {
+	text-align: center;
+	padding: 0 0 50px 0;
+}
+.contact-hana img{
+	width: 5%;
+
+}
+
+
+
+
+
+
+/*-----------------ここから「WORKS」ページ-----------------*/
+
+
+.workspage-text{
+	margin: 40px 0 0 0;
+	text-align: center;
+	font-weight: bold;
+		color: #F18E47;
+	font-size: 20px;
+}
+
+
+
+.workspage-icon img {
+	width: 100px;
+	margin: 10px 20px;
+
+}
+
+
+.workspage-icon ul{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 0 20px;
+		color: #F18E47;
+}
+
+
+
+
+
+
+
+/* -----------------ここからWORKページのグリッドレイアウト -----------------*/
+/* container */
+.wrapper{
+    width:100%;
+}
+.wrapper .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:40px 0px 80px 0;
+}
+/* content */
+.wrapper .content .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .wrapper .content .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.wrapper .content .list-item {
+    margin:100px 0px;
+    padding:0px 30px;
+    text-align:center;
+}
+@media (min-width: 992px) {
+    .wrapper .content .list-item {
+        margin:0px;
+        width:calc(100% / 3);
+    }
+}
+
+.wrapper .content .list{
+	padding: 20px 0;
+}
+
+.wrapper .content .list-item .image{
+    display:block;
+    width:250px;
+    max-width:300px;
+    margin:0px auto 10px auto;
+	   height: 200px;
+object-fit: cover;
+	
+}
+
+
+/*----------------- グリッド画像作品のマウスオーバー----------------- */
+
+.wrapper .content .list-item .image:hover {
+  transform: scale(1);
+  transition-duration: 0.3s;
+	opacity: 0.7;
+}
+
+.wrapper .content .list-item .text{
+    line-height:1.3rem;
+    font-size:0.8rem;
+    color:#666666;
+}
+
+
+
+
+
+
+/*==========================================　WORKワーク - 個々の作品ページ ========================================== */
+
+section.main-info{
+	padding: 40px 0;
+	position: center;
+	color: #707070;
+	
+}
+
+.sub-title{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.sakuhin-title{
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px 0 0;
+}
+
+.main-info #main-img img{
+	padding: 20px 0;
+	width: 100%;
+	max-width: 1100px;
+
+
+}
+
+.main-info .main-img img{
+	padding: 20px 0;
+	width: 100%;
+	max-width: 100%;
+
+}
+
+
+/*========================実際のサイト　URL =========================*/
+.saito-text{
+	text-align: center;
+	padding: 10px;
+}
+
+.saito{
+	text-align: center;
+	padding: 0 0 60px;
+}
+
+.saito a{
+	text-decoration: none;
+	color: #F18E47;
+
+}
+
+/*======================== 基本情報 =========================*/
+
+
+.kihon{
+	text-align: center;
+	padding: 40px 80px;
+}
+
+ul.kihon-info{
+	display: flex;
+	background:rgba(255,243,236,1.00);
+	padding: 7px 40px;
+	
+}
+
+/* 付箋の時期・ソフトなど =*/
+
+li.kihon-info-maintext{
+  color:#F18E47;/*文字色*/
+	display: inline-block;
+font-weight: bold;
+  padding: 0.2em 1em;/*文字周りの余白*/
+  line-height: 1rem;/*行高*/
+border: solid 2px #F18E47;/*線色*/
+  vertical-align: middle;
+	border-radius: 7px;
+}
+
+li.kihon-info-maintext:before {
+  content: '✻';
+  color: #F18E47;
+	opacity: 0.7;
+  margin-right: 4px;
+	margin-left: 2px;
+}
+
+li.kihon-info-subtext{
+	 padding: 0 20px;
+}
+
+.caption{/* 概要箇所 =*/
+	padding: 0 ;
+	font-weight: bold;
+	display: inline-block;
+	
+}
+
+.gaiyou{
+	padding:  50px 30px;
+}
+
+
+
+
+/*================================== 　VIEW　MORE　DESIGN　ボタン==================================*/
+.view-more-design{
+	padding: 50px 0 80px;
+}
+
+a.btn_01 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 250px;
+	margin: auto;
+	padding: 10px 30px;
+	border: 2px solid #F18E47;
+	background: #F18E47;
+	color: #fff;
+	border-radius: 100vh;
+	transition: 0.5s;
+}
+a.btn_01:hover {
+	color: #F18E47;
+	background: #fff;
+}
+
+/*==================================作品ページ サブ画像==================================*/
+
+
+.sub-img1 p{
+	text-align: center;
+	padding: 60px 0 0 0;
+}
+
+.sub-sub-img img {
+	  display: flex;
+  justify-content: center;
+	width:60%;
+	height: auto;
+	margin: 20px auto;
+	
+}
+
+
+/* ==========================================ここからフッター ==========================================*/
+
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 99;
+}
+#page-top a {
+
+  background: rgba(241,142,71,0.72);
+  text-decoration: none;
+  color: #fff;
+  width: 60px;
+  padding: 28px 5px;
+  text-align: center;
+  display: block;
+  border-radius: 90px;
+  opacity: 0.9;
+  transition: all .3s ease;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: .5;
+
+}
+
+
+footer {
+	background-color: #F18E47;
+	padding: 10px;
+	text-align: center;
+	color: #FFFFFF;
+
+    bottom:fixed; /*下に固定*/
+	
+}
+
+
+/*----------------------------------ここからレスポンシブデザイン----------------------------------*/
+
+/* パソコン用 */
+@media screen and (min-width: 769px) {
+/*ここに通常のCSSを入れる*/
+}
+
+/* タブレット用 */
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+/*ここに通常のCSSを入れる*/
+	
+	
+	.main{
+		padding: 4%;
+	}
+	
+	/* プロフィール文章 */
+	#PROFILE .text-detail{
+		padding: 4%;
+		
+	}
+	
+/* 基本情報 */
+	.kihon{
+		padding: 2%;
+	}
+	
+	
+}
+
+
+/* スマートフォン用 */
+@media screen and (max-width: 640px) {
+/*ここに通常のCSSを入れる*/
+	
+
+	.header-rogo img{
+		display: none;
+	
+	}
+	.row ul{
+	font-size: 2vw;
+	}
+	
+.row ul a{	
+	display: inline-block;
+	}	
+	
+	.main{
+		padding: 4%;
+	}
+	
+	/* プロフィール文章 */
+	#PROFILE .text-detail{
+		padding: 4%;
+		
+	}
+	
+/* 基本情報 */
+	.kihon{
+		padding: 2%;
+	}
+	
+	
+	
+}
