@@ -635,27 +635,84 @@ footer {
 /*ここに通常のCSSを入れる*/
 	
 
+	
 	.header-rogo img{
-		display: none;
 	
 	}
+	
+	.header{
+		display: block;
+		padding: 0;
+	}
+	
+	.header.row{
+		padding: 0;
+	}
+	
+
 	.row ul{
-	font-size: 2vw;
+	padding: auto;
+		padding: 0 20px;
+	font-size:  2vw;
+	
 	}
 	
 .row ul a{	
-	display: inline-block;
+	margin: 0 10px;
+	padding: 0;
 	}	
 	
 	.main{
 		padding: 4%;
+		margin: 0;
 	}
+	
+		.work-icon ul {
+		padding: auto;
+		}
+	
+	.work-icon ul img{
+		padding: 0;
+		margin:  0 10px;
+		
+		}
+	
 	
 	/* プロフィール文章 */
 	#PROFILE .text-detail{
 		padding: 4%;
 		
 	}
+	
+	
+	.skill-icon ul {
+		padding: 0;
+	}
+		.skill-icon ul img {
+		margin:auto;
+	}
+	
+	
+	.skill-icon ul p {
+		margin:auto;
+	}
+	
+	
+	
+	/* ここからワークページ */
+	
+	.workspage-icon ul {
+		padding: auto;
+		}
+	
+	.workspage-icon ul img{
+		padding: 0;
+		margin:  0 10px;
+		
+		}
+	
+	
+	
 	
 /* 基本情報 */
 	.kihon{
